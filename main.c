@@ -8,9 +8,9 @@ int main(){
     int escolhaPlano[tam];
     char plano[tam];
     int certeza;
-    int i;
+    int i = 0;
     int numMatricula[tam];
-    float dinheiroEmCaixa;
+    double dinheiroEmCaixa;
 
     int menu;
 
