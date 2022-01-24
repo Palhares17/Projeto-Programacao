@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define tam 10;
+#define tam 10
 
 int main(){
     int decisao;
-    int escolhaPlano[10];
-    char plano[30];
+    int escolhaPlano[tam];
+    char plano[tam];
     int certeza;
     int i;
-    int numMatricula[10];
+    int numMatricula[tam];
     float dinheiroEmCaixa;
 
     int menu;
@@ -76,7 +76,7 @@ int main(){
             }
 
             printf("Perfeito, terminanos a sua matricula.\n");
-            numMatricula[i] = i*10;
+            numMatricula[i] = i*tam;
 
             printf("Sua matricula eh %d e seu plano eh %s", numMatricula[i], plano);
         }
