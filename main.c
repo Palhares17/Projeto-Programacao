@@ -9,6 +9,7 @@ int main(){
     char nome[tam][30]; /* salva o nome da pessoa, em cada linha */
     int i = 0; /* o indice serve para mapear as pessoas matrículadas na academia */
     int numMatricula[tam]; /* salva o número da matrícula */
+    char verNome[30]; /* ver qual o nome da pessoa para ler qual matricula */
     double dinheiroEmCaixa=0;
 
     int menu = 0;
@@ -18,7 +19,7 @@ int main(){
         printf("########## Menu ##########\n");
         printf("Fazer matricula: (1)\n");
         printf("Ver matricula: (2)\n");
-        printf("Ver exercicio: (3)\n");
+        printf("Criar exercicio: (3)\n");
         printf("excluir matricula: (4)\n");
 
         /* matrícula */
@@ -79,6 +80,19 @@ int main(){
             numMatricula[i] = i;
             printf("Entao %s, sua matricula eh %d e seu plano eh %s\n", nome[i], numMatricula[i], plano);
             printf("\n");
+        }
+        if(menu == 2) {
+            printf("Voce selecionou ver a matricula!\n");
+            printf("Qual o seu nome?");
+            scanf("%s", verNome);
+
+            if(strcmp(verNome, nome[i]) == 0) {
+                printf("A sua matricula eh %d", numMatricula[i]);
+            }
+        }
+        if(menu == 3) {
+            printf("Voce selecionou para criar treino.");
+
         }
 
         i++;
