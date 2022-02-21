@@ -1,28 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "EndlessLoop"
-#define tam 10
+#define tam 5
 
 int main(){
     int escolhaPlano[tam]; /* vetor para guardar plano */
     char plano[tam]; /* salva testo dos planos */
-    int i = 0;
+    char nome[tam][30]; /* salva o nome da pessoa, em cada linha */
+    int i = 0; /* o indice serve para mapear as pessoas matrículadas na academia */
     int numMatricula[tam]; /* salva o número da matrícula */
     double dinheiroEmCaixa=0;
 
-    int menu;
-    printf("Sou atendente virtual.\n");
-    printf("########## Menu ##########\n");
-    printf("Fazer matricula: (1-sim | 2-nao)\n");
-    scanf("%d", &menu);
+    int menu = 0;
 
-    if(menu==1) {
-        while(1) {
+    while(1) {
+        printf("Sou atendente virtual.\n");
+        printf("########## Menu ##########\n");
+        printf("Fazer matricula: (1)\n");
+        printf("Ver matricula: (2)\n");
+        printf("Ver exercicio: (3)\n");
+        printf("excluir matricula: (4)\n");
+
+        /* matrícula */
+        if(menu == 1) {
+            scanf("%d", &menu);
+
             printf("Bem-vindo!\n");
 
-            printf("Para continuarmos a matriculo escolha os nossos planos.\n");
+            printf("Para continuarmos a matricula, Diga seu nome:");
+            scanf("%s", nome[i]);
+
+            printf("\n");
+
+            printf("Agora escolha os nossos planos: ");
 
             printf("\n");
 
@@ -67,11 +77,11 @@ int main(){
 
             printf("Perfeito, terminanos a sua matricula.\n");
             numMatricula[i] = i;
-            printf("Sua matricula eh %d e seu plano eh %s\n", numMatricula[i], plano);
+            printf("Entao %s, sua matricula eh %d e seu plano eh %s\n", nome[i], numMatricula[i], plano);
             printf("\n");
-
-            i++;
         }
+
+        i++;
     }
 }
 
