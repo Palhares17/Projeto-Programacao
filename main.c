@@ -21,10 +21,10 @@ int main(){
         printf("Ver matricula: (2)\n");
         printf("Criar exercicio: (3)\n");
         printf("excluir matricula: (4)\n");
+        scanf("%d", &menu);
 
         /* matrícula */
         if(menu == 1) {
-            scanf("%d", &menu);
 
             printf("Bem-vindo!\n");
 
@@ -38,7 +38,7 @@ int main(){
             printf("\n");
 
             printf("Nossos planos sao: \n");
-            printf("1- Premiun:\n- Pode ir todo dia e todos os horarios.\n- Personal para ajudar seu desenvolvimento fisico.\n- Voce tem direito a comer avontede na cantina da academia.\n- Entre outras regalias.\nPOR APENAS (R$ 390,00)\n");
+            printf("1- Premium:\n- Pode ir todo dia e todos os horarios.\n- Personal para ajudar seu desenvolvimento fisico.\n- Voce tem direito a comer avontede na cantina da academia.\n- Entre outras regalias.\nPOR APENAS (R$ 390,00)\n");
 
             printf("\n");
 
@@ -86,13 +86,17 @@ int main(){
             printf("Qual o seu nome?");
             scanf("%s", verNome);
 
-            if(strcmp(verNome, nome[i]) == 0) {
-                printf("A sua matricula eh %d", numMatricula[i]);
+            char alert[300];
+
+            for(int j=0; j<tam; j=0) {
+                if(strcmp(verNome, nome[i]) == 0) {
+                    printf("A sua matricula eh %d", numMatricula[i]);
+                }
             }
         }
+
         if(menu == 3) {
             printf("Voce selecionou para criar treino.");
-
         }
 
         i++;
