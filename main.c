@@ -3,15 +3,26 @@
 #include <string.h>
 #define tam 5
 
-int main(){
-    int escolhaPlano[tam]; /* vetor para guardar plano */
-    char plano[tam]; /* salva testo dos planos */
+/* Struct para criação de matrícula */
+typedef struct {
+    int escolhaPlano; /* vetor para guardar plano */
     char nome[tam][30]; /* salva o nome da pessoa, em cada linha */
-    int i = 0; /* o indice serve para mapear as pessoas matrículadas na academia */
-    int numMatricula[tam]; /* salva o número da matrícula */
-    char verNome[30]; /* ver qual o nome da pessoa para ler qual matricula */
-    double dinheiroEmCaixa=0;
+    char plano[30]; /* salva testo dos planos */
+    char telefone; /* telefone de matrícula */
+    char sexo; /* Sexo na matrícula */
+    int idade; /* idade do cliente na matrícula */
+    double peso; /* peso do cliente na matrícula */
+    double altura; /* altura do cliente na matrícula */
+    int numMatricula; /* Numero teclado */
+} cliente;
 
+int main() {
+    cliente cliente[tam];
+    int i = 0; /* o indice serve para mapear as pessoas matrículadas na academia */
+
+    /* informações do teclado */
+    char nomeTeclado[30]; /* ver qual o nome da pessoa para ler qual matricula */
+    int matriculaTeclado; /* Procura de matricula */
     int menu = 0;
 
     while(1) {
@@ -29,7 +40,22 @@ int main(){
             printf("Bem-vindo!\n");
 
             printf("Para continuarmos a matricula, Diga seu nome:");
-            scanf("%s", nome[i]);
+            scanf("%s", cliente[i].nome);
+
+            printf("Digite sua idade:");
+            scanf("%d", &cliente[i].idade);
+
+            printf("Digite seu peso:");
+            scanf("%lf", &cliente[i].peso);
+
+            printf("Digite sua altura:");
+            scanf("%lf", &cliente[i].altura);
+
+            printf("Qual o seu sexo:");
+            scanf("%s", cliente[i].sexo);
+
+            printf("Digite seu telefone:");
+            scanf("%s", cliente[i].telefone);
 
             printf("\n");
 
@@ -55,48 +81,48 @@ int main(){
             printf("\n");
 
             printf("Escolha o seu plano para terminarmos a matricula.\n");
-            scanf("%d", &escolhaPlano[i]);
+            scanf("%d", &cliente[i].escolhaPlano);
 
-            switch(escolhaPlano[i]) {
+            switch(cliente[i].escolhaPlano) {
                     case 1:
-                        strcpy(plano, "Premium");
-                        dinheiroEmCaixa += 390.00;
+                        strcpy(cliente[i].plano, "Premium");
                         break;
                     case 2:
-                        strcpy(plano, "Platinum");
-                        dinheiroEmCaixa += 200.00;
+                        strcpy(cliente[i].plano, "Platinum");
                         break;
                     case 3:
-                        strcpy(plano, "Bronzeum");
-                        dinheiroEmCaixa += 100.00;
+                        strcpy(cliente[i].plano, "Bronzeum");
                         break;
                     case 4:
-                        strcpy(plano, "Lataum");
-                        dinheiroEmCaixa += 90.00;
+                        strcpy(cliente[i].plano, "Lataum");
                         break;
             }
 
             printf("Perfeito, terminanos a sua matricula.\n");
-            numMatricula[i] = i;
-            printf("Entao %s, sua matricula eh %d e seu plano eh %s\n", nome[i], numMatricula[i], plano);
+            cliente[i].numMatricula = i;
+            printf("Entao %s, sua matricula eh %d e seu plano eh %s\n", cliente[i].nome, cliente[i].numMatricula, cliente[i].plano);
             printf("\n");
         }
+
+        /* Pesquisar nome */
         if(menu == 2) {
             printf("Voce selecionou ver a matricula!\n");
             printf("Qual o seu nome?");
-            scanf("%s", verNome);
-
-            char alert[300];
+            scanf("%s", nomeTeclado);
 
             for(int j=0; j<tam; j=0) {
-                if(strcmp(verNome, nome[i]) == 0) {
-                    printf("A sua matricula eh %d", numMatricula[i]);
+                if(strcmp(nomeTeclado, cliente[i].nome) == 0) {
+                    printf("A sua matricula eh %d", cliente[i].numMatricula);
                 }
             }
         }
 
+        /* Criar treino */
         if(menu == 3) {
             printf("Voce selecionou para criar treino.");
+
+            printf("Primeiro, me informe a sua matricula.");
+
         }
 
         i++;
