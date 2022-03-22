@@ -2,6 +2,7 @@
 #include <string.h>
 #define tam 5
 
+/* structs */
 typedef struct {
     int escolhaPlano; /* vetor para guardar plano */
     char nome[30]; /* salva o nome da pessoa, em cada linha */
@@ -15,6 +16,7 @@ typedef struct {
     char exercicio[200];
 } dados;
 
+/* inicio - Funções */
 void escolherPlano(dados *cliente, int indice) {
     printf("\n### Agora escolha os nossos planos: ### \n\n");
 
@@ -93,6 +95,7 @@ void buscarMatricula(dados *cliente, int indice, char *procura) {
     }
 }
 
+/* função de criação de exercício */
 void exercicio(dados *cliente, int indice) {
     int matriculaTeclado;
     int objetivo;
@@ -126,19 +129,20 @@ void print(dados *cliente, int indice) {
         printf("O nome da pessoa [%d] -> %s\n", indice, cliente[i].nome);
         printf("A idade da pessoa [%d] -> %d\n", indice, cliente[i].idade);
         printf("O peso da pessoa [%d] -> %.2lf\n", indice, cliente[i].peso);
-        printf("A altura da pessoa [%d] -> %.2lf\n", indice, cliente[i].altura);
+        printf("A altura da pessoa [%d] -> %.2oelf\n", indice, cliente[i].altura);
         printf("O sexo da pessoa [%d] -> %s\n", indice, cliente[i].sexo);
         printf("O telefone da pessoa [%d] -> %s\n", indice, cliente[i].telefone);
         printf("A matricula da pessoa [%d] -> %s\n", indice, cliente[i].numMatricula);
     }
 }
+/* final - Funções */
 
 int main() {
     dados cliente[tam];
     char nomeTeclado[30];
     int i = 0;
-
     int menu;
+
     while(1) {
         printf("\nSou atendente virtual.\n\n");
         printf("########## Menu ##########\n");
