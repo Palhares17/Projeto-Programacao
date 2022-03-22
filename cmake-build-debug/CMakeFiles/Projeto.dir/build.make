@@ -68,28 +68,28 @@ include CMakeFiles/Projeto.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Projeto.dir/flags.make
 
-CMakeFiles/Projeto.dir/main.c.obj: CMakeFiles/Projeto.dir/flags.make
-CMakeFiles/Projeto.dir/main.c.obj: ../main.c
-CMakeFiles/Projeto.dir/main.c.obj: CMakeFiles/Projeto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ma-pa\CLionProjects\Projeto-Programacao\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Projeto.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Projeto.dir/main.c.obj -MF CMakeFiles\Projeto.dir\main.c.obj.d -o CMakeFiles\Projeto.dir\main.c.obj -c C:\Users\ma-pa\CLionProjects\Projeto-Programacao\main.c
+CMakeFiles/Projeto.dir/teste.c.obj: CMakeFiles/Projeto.dir/flags.make
+CMakeFiles/Projeto.dir/teste.c.obj: ../teste.c
+CMakeFiles/Projeto.dir/teste.c.obj: CMakeFiles/Projeto.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ma-pa\CLionProjects\Projeto-Programacao\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Projeto.dir/teste.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Projeto.dir/teste.c.obj -MF CMakeFiles\Projeto.dir\teste.c.obj.d -o CMakeFiles\Projeto.dir\teste.c.obj -c C:\Users\ma-pa\CLionProjects\Projeto-Programacao\teste.c
 
-CMakeFiles/Projeto.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projeto.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ma-pa\CLionProjects\Projeto-Programacao\main.c > CMakeFiles\Projeto.dir\main.c.i
+CMakeFiles/Projeto.dir/teste.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projeto.dir/teste.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ma-pa\CLionProjects\Projeto-Programacao\teste.c > CMakeFiles\Projeto.dir\teste.c.i
 
-CMakeFiles/Projeto.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projeto.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ma-pa\CLionProjects\Projeto-Programacao\main.c -o CMakeFiles\Projeto.dir\main.c.s
+CMakeFiles/Projeto.dir/teste.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projeto.dir/teste.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ma-pa\CLionProjects\Projeto-Programacao\teste.c -o CMakeFiles\Projeto.dir\teste.c.s
 
 # Object files for target Projeto
 Projeto_OBJECTS = \
-"CMakeFiles/Projeto.dir/main.c.obj"
+"CMakeFiles/Projeto.dir/teste.c.obj"
 
 # External object files for target Projeto
 Projeto_EXTERNAL_OBJECTS =
 
-Projeto.exe: CMakeFiles/Projeto.dir/main.c.obj
+Projeto.exe: CMakeFiles/Projeto.dir/teste.c.obj
 Projeto.exe: CMakeFiles/Projeto.dir/build.make
 Projeto.exe: CMakeFiles/Projeto.dir/linklibs.rsp
 Projeto.exe: CMakeFiles/Projeto.dir/objects1.rsp

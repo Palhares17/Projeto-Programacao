@@ -128,29 +128,29 @@ Projeto/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/build
 .PHONY : Projeto/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+teste.obj: teste.c.obj
+.PHONY : teste.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/main.c.obj
-.PHONY : main.c.obj
+teste.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/teste.c.obj
+.PHONY : teste.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+teste.i: teste.c.i
+.PHONY : teste.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/main.c.i
-.PHONY : main.c.i
+teste.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/teste.c.i
+.PHONY : teste.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+teste.s: teste.c.s
+.PHONY : teste.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/main.c.s
-.PHONY : main.c.s
+teste.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projeto.dir\build.make CMakeFiles/Projeto.dir/teste.c.s
+.PHONY : teste.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Projeto
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... teste.obj
+	@echo ... teste.i
+	@echo ... teste.s
 .PHONY : help
 
 

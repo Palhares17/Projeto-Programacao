@@ -6,7 +6,7 @@
 /* Struct para criação de matrícula */
 typedef struct {
     int escolhaPlano; /* vetor para guardar plano */
-    char nome[tam][30]; /* salva o nome da pessoa, em cada linha */
+    char nome[30]; /* salva o nome da pessoa, em cada linha */
     char plano[30]; /* salva testo dos planos */
     char telefone; /* telefone de matrícula */
     char sexo; /* Sexo na matrícula */
@@ -32,6 +32,8 @@ int main() {
         printf("Ver matricula: (2)\n");
         printf("Criar exercicio: (3)\n");
         printf("excluir matricula: (4)\n");
+
+        printf("->");
         scanf("%d", &menu);
 
         /* matrícula */
