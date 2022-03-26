@@ -1,19 +1,18 @@
-#include <stdio.h>
-#include <string.h>
-#define tam 5
+#include "header.h"
+#define tam 100
 
 /* structs */
 typedef struct {
-    int escolhaPlano; /* vetor para guardar plano */
-    char nome[30]; /* salva o nome da pessoa, em cada linha */
-    char plano[30]; /* salva testo dos planos */
-    char telefone[30]; /* telefone de matrícula */
-    char sexo[30]; /* Sexo na matrícula */
-    int idade; /* idade do cliente na matrícula */
-    double peso; /* peso do cliente na matrícula */
-    double altura; /* altura do cliente na matrícula */
-    int numMatricula; /* Numero teclado */
-    char exercicio[200];
+    int escolhaPlano;    /* vetor para guardar plano */
+    char nome[30];       /* salva o nome da pessoa, em cada linha */
+    char plano[30];      /* salva testo dos planos */
+    char telefone[30];   /* telefone de matrícula */
+    char sexo[30];       /* Sexo na matrícula */
+    int idade;           /* idade do cliente na matrícula */
+    double peso;         /* peso do cliente na matrícula */
+    double altura;       /* altura do cliente na matrícula */
+    int numMatricula;    /* Numero teclado */
+    char exercicio[200]; /* Os exercícios que vão ser gerados */
 } dados;
 
 /* inicio - Funções */
@@ -86,11 +85,15 @@ void fazerMatricula(dados *cliente, int indice) {
     escolherPlano(cliente, indice);
 }
 
-void buscarMatricula(dados *cliente, int indice, char *procura) {
+void buscarMatricula(dados *cliente, int indice) {
+    char nomeTeclado[30];
+
+    printf("Para acharmos sua matricula, me diga qual o seu nome:");
+    scanf(" %[^\n]s", nomeTeclado);
     for(int i=0; i<indice; i++) {
-        if(strcmp(cliente[indice].nome, procura) == 0) {
+        if(strcmp(cliente[i].nome, nomeTeclado) == 0) {
             printf("Sua matricula eh:");
-            printf(">> %d", cliente[i].numMatricula);
+            printf("%d", cliente[i].numMatricula);
         }
     }
 }
@@ -126,20 +129,20 @@ void excluirMatricula(dados *cliente, int indice) {
 
 void print(dados *cliente, int indice) {
     for(int i=0; i<indice; i++) {
-        printf("O nome da pessoa [%d] -> %s\n", indice, cliente[i].nome);
-        printf("A idade da pessoa [%d] -> %d\n", indice, cliente[i].idade);
-        printf("O peso da pessoa [%d] -> %.2lf\n", indice, cliente[i].peso);
-        printf("A altura da pessoa [%d] -> %.2oelf\n", indice, cliente[i].altura);
-        printf("O sexo da pessoa [%d] -> %s\n", indice, cliente[i].sexo);
-        printf("O telefone da pessoa [%d] -> %s\n", indice, cliente[i].telefone);
-        printf("A matricula da pessoa [%d] -> %s\n", indice, cliente[i].numMatricula);
+        printf("O nome da pessoa [%d] -> %s\n", i, cliente[i].nome);
+        printf("A idade da pessoa [%d] -> %d\n", i, cliente[i].idade);
+        printf("O peso da pessoa [%d] -> %.2lf\n", i, cliente[i].peso);
+        printf("A altura da pessoa [%d] -> %.2lf\n", i, cliente[i].altura);
+        printf("O sexo da pessoa [%d] -> %s\n", i, cliente[i].sexo);
+        printf("O telefone da pessoa [%d] -> %s\n", i, cliente[i].telefone);
+        printf("A matricula da pessoa [%d] -> %d\n", i, cliente[i].numMatricula);
     }
 }
 /* final - Funções */
 
 int main() {
     dados cliente[tam];
-    char nomeTeclado[30];
+
     int i = 0;
     int menu;
 
@@ -149,7 +152,8 @@ int main() {
         printf("Fazer matricula: (1)\n");
         printf("Ver matricula: (2)\n");
         printf("Criar exercicio: (3)\n");
-        printf("excluir matricula: (4)\n\n");
+        printf("excluir matricula: (4)\n");
+        printf("Sair da atendente virtual: (5)\n\n");
 
         printf(">>");
         scanf("%d", &menu);
@@ -159,10 +163,7 @@ int main() {
         }
 
         if(menu == 2) {
-            printf("Para acharmos sua matrícula, me diga qual o seu nome:");
-            scanf(" %[^\n]s", nomeTeclado);
-
-            buscarMatricula(cliente, i, nomeTeclado);
+            buscarMatricula(cliente, i);
         }
 
         if(menu == 3) {
@@ -174,6 +175,11 @@ int main() {
         }
 
         if(menu == 5) {
+            break;
+        }
+
+        /* Apenas uma função para mostrar os dados */
+        if(menu == 6) {
             print(cliente, i);
         }
 

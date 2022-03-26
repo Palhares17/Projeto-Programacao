@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/ma-pa/CLionProjects/Projeto-Programacao/header.h">
+			<Option target="Projeto"/>
+		</Unit>
 		<Unit filename="C:/Users/ma-pa/CLionProjects/Projeto-Programacao/teste.c">
 			<Option target="Projeto"/>
 		</Unit>
