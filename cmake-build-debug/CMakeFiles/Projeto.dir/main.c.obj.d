@@ -1,5 +1,6 @@
 CMakeFiles/Projeto.dir/main.c.obj: \
  C:\Users\ma-pa\CLionProjects\Projeto-Programacao\main.c \
+ C:\Users\ma-pa\CLionProjects\Projeto-Programacao\header.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
